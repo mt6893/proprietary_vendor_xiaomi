@@ -1,0 +1,14 @@
+persist.vendor.mtk_ct_volte_support=0
+ro.vendor.mtk_usb_cba_support=1
+persist.vendor.operator.optr=OP01
+persist.vendor.operator.spec=SPEC0200
+persist.vendor.operator.seg=SEGC
+ro.vendor.operator.optr=OP01
+ro.vendor.operator.spec=SPEC0200
+ro.vendor.operator.seg=SEGC
+ro.com.android.mobiledata=false
+persist.vendor.radio.mtk_dsbp_support=0
+ro.vendor.mtk_md_sbp_custom_value=1
+ro.vendor.mtk_ct4greg_app=0
+ro.vendor.mtk_devreg_app=0
+ro.vendor.mtk_system_update_support=0

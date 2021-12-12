@@ -1,0 +1,3 @@
+persist.vendor.mtk_ct_volte_support=3
+ro.vendor.mtk_ct4greg_app=1
+ro.vendor.mtk_devreg_app=1
