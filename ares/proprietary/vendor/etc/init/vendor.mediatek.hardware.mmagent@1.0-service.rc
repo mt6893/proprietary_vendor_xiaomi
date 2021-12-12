@@ -1,0 +1,4 @@
+service mmagent-1-0 /vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.0-service
+    class main
+    user system
+    group system graphics

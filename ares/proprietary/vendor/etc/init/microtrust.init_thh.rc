@@ -1,0 +1,6 @@
+service init_thh_service /vendor/bin/init_thh_isee startload
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled

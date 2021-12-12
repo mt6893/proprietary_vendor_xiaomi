@@ -1,0 +1,8 @@
+# EARA
+service eara /vendor/bin/eara
+    class main
+    user system
+    oneshot
+
+on boot
+    start eara

@@ -1,0 +1,363 @@
+{
+    "version":"1.0",
+    "product":"ares",
+    "testitems":[
+        {
+            "name":"home_version_info_test",
+            "caption":"版本信息测试"
+
+        },
+        {
+            "name":"home_sim_card_check_test",
+            "caption":"SIM卡测试"
+
+        },
+        {
+            "name":"home_vibrator_check_test",
+            "caption":"震动测试"
+
+        },
+        {
+            "name":"home_keyboard_check_test",
+            "caption":"按键测试",
+            "config":{
+                "support_check_keys": ["volumeUp_down","volumeUp_up",
+                    "volumeDown_down","volumeDown_up", "power_down","power_up",
+                    "left_game_key_down","left_game_key_up","right_game_key_down","right_game_key_up",
+                    "right_shoulder_switch_on","right_shoulder_switch_off","left_shoulder_switch_on","left_shoulder_switch_off"]
+            }
+        },
+        {
+            "name": "home_led_test",
+            "caption": "LED灯测试",
+            "config": {
+                "support_checked_leds": [
+                    {
+                        "name": "cit_lcdlight_brightness",
+                        "type": "screen_brightness",
+                        "max_brightness":2047,
+                        "breath":true
+                    },
+                    {
+                        "name": "cit_torch_first",
+                        "type": "camera_flash",
+                        "switch_node_path": "/sys/class/leds/led:switch_0",
+                        "torch_node_path": "/sys/class/leds/led:torch_0"
+                    },
+                    {
+                        "name": "cit_torch_second",
+                        "type": "camera_flash",
+                        "switch_node_path": "/sys/class/leds/led:switch_1",
+                        "torch_node_path": "/sys/class/leds/led:torch_1"
+                    },
+                    {
+                      "name": "cit_batterylight_red",
+                      "type": "power_led",
+                      "torch_node_path": "/sys/class/leds/red",
+                      "max_brightness": 255
+                    },
+                    {
+                      "name": "cit_batterylight_blue",
+                      "type": "power_led",
+                      "max_brightness": 255,
+                      "torch_node_path": "/sys/class/leds/blue"
+                    },
+                    {
+                      "name": "cit_batterylight_green",
+                      "type": "power_led",
+                      "max_brightness": 255,
+                      "torch_node_path": "/sys/class/leds/green"
+                    }
+                ]
+            }
+        },
+        {
+            "name":"home_touch_panel_test",
+            "caption":"触摸屏测试"
+
+        },
+        {
+            "name":"home_display_test",
+            "caption":"屏幕显示测试"
+
+        },
+        {
+            "name":"home_audio_ear_piece_test",
+            "caption":"听筒测试"
+
+        },
+        {
+            "name":"home_audio_speaker_test",
+            "caption":"top扬声器测试"
+
+        },
+        {
+            "name":"home_audio_top_speaker_test",
+            "caption":"top扬声器测试"
+
+        },
+        {
+            "name":"home_audio_main_mic_test",
+            "caption":"main mic测试"
+
+        },
+        {
+            "name":"home_audio_back_mic_test",
+            "caption":"top mic测试"
+
+        },
+        {
+            "name":"home_audio_top_mic_test",
+            "caption":"back mic测试"
+
+        },
+        {
+            "name":"home_audio_head_set_test",
+            "caption":"耳机测试",
+            "config": {
+                "head_set_config": "5mm"
+            }
+   
+        },
+
+        {
+            "name":"home_wifi_scan_test",
+            "caption":"WIFI扫描测试"
+
+        },
+        {
+            "name":"home_wifi_address_test",
+            "caption":"WIFI地址测试"
+
+        },
+        {
+            "name":"home_bt_scan_test",
+            "caption":"BT扫描测试"
+
+        },
+        {
+            "name":"home_bt_address_test",
+            "caption":"BT地址测试"
+
+        },
+        {
+            "name":"home_sensor_accelermeter_test",
+            "caption":"加速度感应器测试"
+
+        },
+
+        {
+            "name":"home_sensor_gyroscope_test",
+            "caption":"陀螺仪感应器测试"
+
+        },
+
+        {
+            "name":"home_sensor_magnetic_test",
+            "caption":"磁场感应器测试"
+
+        },
+        {
+            "name":"home_sensor_proximity_test",
+            "caption":"距离感应器测试"
+
+        },
+        {
+            "name":"home_sensor_light_test",
+            "caption":"光线感应器测试",
+            "config":{
+                "sensor_light_val_path_config":"/sys/class/mi_display/disp_feature/brightness_clone"
+            }
+        },
+
+        {
+            "name":"home_rear_main_camera_test",
+            "caption":"后置主相机测试",
+            "config":{
+                "camera_id_rear_main":0
+            }
+        },
+        {
+            "name":"home_front_main_test",
+            "caption":"前置相机测试",
+            "config":{
+                "camera_id_front_main":1
+            }
+        },
+        {
+            "name":"home_rear_macro_camera_test",
+            "caption":"微距macro相机测试",
+            "config":{
+                "camera_id_rear_macro":22
+            }
+        },
+        {
+            "name":"home_rear_ultra_camera_test",
+            "caption":"广角ultra相机测试",
+            "config":{
+                "camera_id_rear_ultra":21
+            }
+        },
+
+        {
+            "name":"home_battery_test",
+            "caption":"电池测试",
+            "config":{
+                "support_dual_connector":true,
+                "battery_dual_connector_path_config":"/sys/class/power_supply/bq2597x-master/ti_battery_present",
+                "battery_id_path_config":"/sys/class/power_supply/bms/resistance_id",
+                "battery_chip_ok_path_config":"/sys/class/power_supply/bms/chip_ok",
+                "battery_autnentic_path_config":"sys/class/power_supply/bms/authentic"
+            }
+        },
+        {
+            "name":"home_charger_test",
+            "caption":"充电器测试",
+            "config":{
+                "support_pd_charger":true,
+                "cc_orientation_path_config":"/sys/class/power_supply/usb/typec_cc_orientation",
+                "charger_type_path_config":"/sys/class/power_supply/usb/real_type"
+            }
+        },
+        {
+            "name":"home_otg_test",
+            "caption":"OTG",
+            "config":{
+                "cc_orientation_path_config":"/sys/class/power_supply/usb/typec_cc_orientation"
+            }
+
+        },
+        {
+            "name":"home_nfc_check_test",
+            "caption":"NFC测试",
+            "config":{
+                "eseNFC_chip_model":"pn100t"
+            }
+        },
+        {
+            "name":"home_sensor_gps_test",
+            "caption":"GPS测试"
+        },
+        {
+            "name":"home_sensor_sar_data_collect_test",
+            "caption":"SAR Sensor数据采集测试",
+            "config":{
+                "first_sar_chanel_num": 6,
+                "second_sar_chanel_num": 6,
+                "c0_threshold_far_first_sar":[0,200],
+                "c0_threshold_near_first_sar":[2000,30000],
+                "c0_threshold_far_second_sar":[0,200],
+                "c0_threshold_near_second_sar":[2000,30000]
+            }
+
+        },
+        {
+            "name": "home_fp_sensor_check_test",
+            "caption": "指纹传感器测试"
+        },
+        {
+            "name": "home_fp_check_test",
+            "caption": "指纹录入测试"
+        }
+
+    ],
+
+    "auxiliaryTestItems":[
+        {
+            "name":"accelermeter_sensor_cali",
+            "caption":"加速度感应器校准"
+        },
+        {
+            "name":"gyroscope_sensor_cali",
+            "caption":"陀螺仪感应器校准"
+        },
+
+        {
+            "name":"camera_cali",
+            "caption":"相机校准"
+        },
+        {
+            "name":"touch_pointer_location",
+            "caption":"触摸屏测试"
+        },
+        {
+            "name":"audio_speaker_cali",
+            "caption":"扬声器校准",
+            "config":{
+                "check_second_smart_pa":true,
+                "speaker_calibration_cmds":["spkcal  -c ","spkcal  -m "]
+            }
+        },
+        {
+            "name":"sar_sensor_collect_cali",
+            "caption":"SAR感应器数据收集和校准",
+            "config":{
+                "first_sar_chanel_num": 6,
+                "second_sar_chanel_num": 6,
+                "c0_threshold_far_first_sar":[0,500],
+                "c0_threshold_near_first_sar":[2000,50000],
+                "sar_sensor_match_value": 0
+            }
+        },
+        {
+            "name": "sar_sensor_authenti",
+            "caption": "Sar Authenti 测试"
+        }
+    ],
+    "autoTestItems": [
+        {
+            "name": "auto_test_device_info",
+            "caption": "自动化测试deviceInfo",
+            "config": {
+                "lcd_info_path_config": "/sys/class/mi_display/disp_feature/panel_info"
+            }
+        },
+        {
+            "name": "auto_test_flash_life",
+            "caption": "自动化测试存储器寿命",
+            "config": {
+                "ufs_life_path_config": "/sys/devices/virtual/mi_memory/mi_memory_device/ufshcd0/dump_health_desc",
+                "flash_factory_data_path_config": "/sys/devices/virtual/mi_memory/mi_memory_device/ufshcd0/dump_device_desc"
+            }
+        },
+        {
+            "name": "auto_test_battery_dual_connector",
+            "caption": "自动化测试电池双连接器",
+            "config": {
+                "battery_dual_connector_path_config": "/sys/class/power_supply/bq2597x-master/ti_battery_present"
+            }
+        },
+        {
+            "name": "auto_test_battery_auth",
+            "caption": "自动化测试电池加密认证",
+            "config": {
+                "battery_chip_ok_path_config": "/sys/class/power_supply/bms/chip_ok",
+                "battery_autnentic_path_config":"sys/class/power_supply/bms/authentic"
+            }
+        },
+        {
+            "name": "auto_test_power_led",
+            "caption": "自动化测试LED电源灯",
+            "config": {
+                "support_checked_leds": [
+                    {
+                        "led_type": "red",
+                        "brightness_path_config": "/sys/class/leds/red/brightness",
+                        "max_brightness_val_path_config": "/sys/class/leds/red/max_brightness"
+                    },
+                    {
+                        "led_type": "green",
+                        "brightness_path_config": "/sys/class/leds/green/brightness",
+                        "max_brightness_val_path_config": "/sys/class/leds/green/max_brightness"
+                    },
+                    {
+                        "led_type": "blue",
+                        "brightness_path_config": "/sys/class/leds/blue/brightness",
+                        "max_brightness_val_path_config": "/sys/class/leds/blue/max_brightness"
+                    }
+
+                ]
+            }
+        }
+    ]
+}

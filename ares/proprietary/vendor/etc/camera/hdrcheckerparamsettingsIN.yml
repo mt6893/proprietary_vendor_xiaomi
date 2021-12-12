@@ -1,0 +1,79 @@
+#if there is any change, please modify the commiter and modification time when submitting
+commiter: 'chenyifei'
+timestamp: '202106021604'
+product_name: 27
+
+trigger:
+  rear:
+    method: 1 # 0:real drc | 1: hdrbhist+svm 
+    HDR_AUTO: # [uw, wide, 2x, tele]
+      real_drc_gain: [3.5, 6.0, 6.0, 6.0]
+      real_drc_delta: [1.0, 1.0, 1.0, 1.0]
+      luxindex: [360, 360, 360, 360]
+      hdr_conf_max: [0.5, 0.73, 0.73, 0.73]
+      hdr_conf_min: [0.5, 0.5, 0.5, 0.5]
+      overexp_ratio: [0.03, 0.03, 0.03, 0.03]
+      lhdr_conf_max: [0.6, 0.6, 0.6, 0.6]
+      lhdr_conf_min: [0.4, 0.4, 0.4, 0.4]
+      lhdr_expo_1: [30, 30, 30, 30]
+      lhdr_expo_2: [50, 50, 50, 50]
+      lhdr_expo_3: [60, 60, 60, 60]
+      lhdr_luma_1: [10.1, 10.1, 10.1, 10.1]
+      lhdr_luma_2: [15.1, 15.1, 15.1, 15.1]
+      lhdr_luma_3: [20.1, 20.1, 20.1, 20.1]
+      lhdr_expo_th: [30, 30, 30, 30]
+      lhdr_lux_th: [300, 300, 300, 300]
+      lhdr_sensitivity: [1000, 1000, 1000, 1000]
+      lhdr_method: [7, 7, 7, 7] # three bit, 0b___, ae luma, exp time, sensitivity
+    HDR_ON: # [uw, wide, 2x, tele]
+      real_drc_gain: [3.5, 6.0, 6.0, 6.0]
+      real_drc_delta: [1.0, 1.0, 1.0, 1.0]
+      luxindex: [360, 360, 360, 360]
+      hdr_conf_max: [0.5, 0.5, 0.5, 0.5]
+      hdr_conf_min: [0.378, 0.378, 0.378, 0.378]
+      overexp_ratio: [0.01, 0.01, 0.01, 0.01]
+      lhdr_conf_max: [0.5, 0.5, 0.5, 0.5]
+      lhdr_conf_min: [0.4, 0.4, 0.4, 0.4]
+      lhdr_expo_1: [30, 30, 30, 30]
+      lhdr_expo_2: [50, 50, 50, 50]
+      lhdr_expo_3: [60, 60, 60, 60]
+      lhdr_luma_1: [10.1, 10.1, 10.1, 10.1]
+      lhdr_luma_2: [15.1, 15.1, 15.1, 15.1]
+      lhdr_luma_3: [20.1, 20.1, 20.1, 20.1]
+      lhdr_expo_th: [30, 30, 30, 30]
+      lhdr_lux_th: [300, 300, 300, 300]
+      lhdr_sensitivity: [1000, 1000, 1000, 1000]
+      lhdr_method: [7, 7, 7, 7] # three bit, 0x___, exp time, sensitivity, ae luma
+  front:
+    method: 1 # currently only supports hdrbhist
+    HDR_AUTO: 
+      hdr_conf_max: 0.73
+      hdr_conf_min: 0.5
+      overexp_ratio: 0.03
+    HDR_ON:
+      hdr_conf_max: 0.5
+      hdr_conf_min: 0.378
+      overexp_ratio: 0.01
+ev:
+  rear:
+    ev_method: 0 # 0 dynamic, 1 fixed
+    ev_formula: 0
+    ev_normal: [9, -24, 0]
+    ev_lowlight: [0, 0, 0, -24]
+    ev_adj: [1, 1, 1, 1]
+    delta_ev: [true, true, true, true] # just for mtk [uw, wide, 2x, tele]
+    delta_ratio_middle: [0, 1, 1, 1]
+    delta_ratio_max: [1, 0, 0, 0]
+  front:
+    ev_method: 1 # currently only fixed
+    ev_front: [0, -9, -24]
+    delta_ev: true # just for mtk 
+    delta_ratio_middle: 1
+    delta_ratio_max: 0
+options:
+  support_ui_ae: false
+  limit_ae_converge: true
+  judge_ae_active: true
+  judge_ae_converge: true
+  revise_ev: true
+  skip_ae_lock: true

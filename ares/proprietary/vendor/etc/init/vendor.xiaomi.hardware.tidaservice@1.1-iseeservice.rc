@@ -1,0 +1,8 @@
+service vendor.isee.tidaservice-1-1 /vendor/bin/tidad_isee@1.1
+    class hal
+    user system
+    group system
+    disabled
+
+on property:sys.boot_completed=1 && property:ro.boot.tee_type=2
+    start vendor.isee.tidaservice-1-1

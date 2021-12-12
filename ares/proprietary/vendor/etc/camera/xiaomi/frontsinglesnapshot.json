@@ -1,0 +1,91 @@
+{
+  "PipelineName": "FrontSingleSnapshot",
+  "NodesList": {
+    "Node": [
+      {
+        "NodeName": "com.xiaomi.plugin.miaihdr",
+        "NodeInstance": "MiaihdrInstance"
+      },
+      {
+        "NodeName": "com.xiaomi.plugin.dc",
+        "NodeInstance": "DcInstance"
+      },
+      {
+        "NodeName": "com.xiaomi.plugin.misegment",
+        "NodeInstance": "MisegmentInstance"
+      },
+      {
+        "NodeName": "com.xiaomi.plugin.skinbeautifier",
+        "NodeInstance": "Skinnstance"
+      },
+      {
+        "NodeName": "com.xiaomi.plugin.swflip",
+        "NodeInstance":"SwflipInstance"
+      }
+    ]
+  },
+  "PortLinkages": {
+    "Link": [
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "SourceBuffer"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": "MiaihdrInstance"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "MiaihdrInstance"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": "DcInstance"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "DcInstance"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": "MisegmentInstance"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "MisegmentInstance"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance":"Skinnstance"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "Skinnstance"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance":"SwflipInstance"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": "SwflipInstance"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance":"SinkBuffer"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+service vendor.mitee.mtdservice-1-2 /vendor/bin/mtd_mitee@1.2
+    class hal
+    group system keystore drmrpc
+    disabled
+
+on property:sys.boot_completed=1 && property:ro.boot.tee_type=1
+    start vendor.mitee.mtdservice-1-2

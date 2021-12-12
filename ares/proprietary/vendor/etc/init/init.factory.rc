@@ -1,0 +1,27 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+service factory_sleep /system/bin/sh /vendor/bin/powersleep.sh
+    class main
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:shell:s0
+
+on property:factory-sleep=1
+    start factory_sleep
+
+service factory_shutdown /system/bin/sh /vendor/bin/shutdown.sh
+    class main
+    oneshot
+    disabled
+    user root
+    group root
+    seclabel u:r:shell:s0
+
+on property:factory-shutdown=1
+    start factory_shutdown

@@ -1,0 +1,8 @@
+service vendor.mitee.mlipay-1-1 /vendor/bin/mlipayd_mitee@1.1
+    class hal
+    user system
+    group system
+    disabled
+
+on property:sys.boot_completed=1 && property:ro.boot.tee_type=1
+    start vendor.mitee.mlipay-1-1
