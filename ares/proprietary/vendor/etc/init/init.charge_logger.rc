@@ -5,7 +5,6 @@ service charge_logger /vendor/bin/charge_logger
     group system system wakelock
     disabled
     oneshot
-    seclabel u:r:charge_logger:s0
 
 on post-fs-data
     mkdir /data/vendor/charge_logger 0771 system system

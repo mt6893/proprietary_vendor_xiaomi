@@ -8,7 +8,7 @@ soong_namespace {
 android_app_import {
 	name: "ImsService",
 	owner: "xiaomi",
-	apk: "proprietary/priv-app/ImsService/ImsService.apk",
+	apk: "proprietary/system/priv-app/ImsService/ImsService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -19,67 +19,68 @@ android_app_import {
 dex_import {
 	name: "mediatek-common",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-common.jar"],
+	jars: ["proprietary/system/framework/mediatek-common.jar"],
 }
 
 dex_import {
 	name: "mediatek-framework",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-framework.jar"],
+	jars: ["proprietary/system/framework/mediatek-framework.jar"],
 }
 
 dex_import {
 	name: "mediatek-ims-base",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-ims-base.jar"],
+	jars: ["proprietary/system/framework/mediatek-ims-base.jar"],
 }
 
 dex_import {
 	name: "mediatek-ims-common",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-ims-common.jar"],
+	jars: ["proprietary/system/framework/mediatek-ims-common.jar"],
 }
 
 dex_import {
 	name: "mediatek-telecom-common",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-telecom-common.jar"],
+	jars: ["proprietary/system/framework/mediatek-telecom-common.jar"],
 }
 
 dex_import {
 	name: "mediatek-telephony-base",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-telephony-base.jar"],
+	jars: ["proprietary/system/framework/mediatek-telephony-base.jar"],
 }
 
 dex_import {
 	name: "mediatek-telephony-common",
 	owner: "xiaomi",
-	jars: ["proprietary/framework/mediatek-telephony-common.jar"],
+	jars: ["proprietary/system/framework/mediatek-telephony-common.jar"],
+}
+
+dex_import {
+	name: "mediatek-ims-extension-plugin",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/mediatek-ims-extension-plugin.jar"],
+}
+
+dex_import {
+	name: "mediatek-ims-legacy",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/mediatek-ims-legacy.jar"],
+}
+
+dex_import {
+	name: "com.fingerprints.extension",
+	owner: "xiaomi",
+	jars: ["proprietary/vendor/framework/com.fingerprints.extension.jar"],
+	soc_specific: true,
 }
 
 prebuilt_etc_xml {
 	name: "AHBF@2.1-service",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/AHBF@2.1-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.boot@1.1",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.boot@1.1.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "android.hardware.cas@1.2-service",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -104,15 +105,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.health@2.1",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.health@2.1.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
 	name: "android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml",
@@ -131,36 +123,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.wifi@1.0-service",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
 	name: "fod",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/fod.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "lights-mtk-default",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/lights-mtk-default.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "manifest_android.hardware.drm@1.3-service.clearkey",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.clearkey.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,

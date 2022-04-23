@@ -6,7 +6,6 @@ service mi_ic /vendor/bin/MI_IC
 	class main
 	disabled
 	oneshot
-	seclabel u:r:mi_ic:s0
 
 on property:vendor.mi_ic.is.valid=0
 	stop mi_ic

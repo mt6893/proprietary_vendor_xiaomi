@@ -10,18 +10,15 @@ service mi_ric_init /vendor/bin/MI_RIC -i
 	class main
 	disabled
 	oneshot
-	seclabel u:r:mi_ric:s0
 
 service mi_ric_run /vendor/bin/MI_RIC -r
 	class main
 	disabled
-	seclabel u:r:mi_ric:s0
 
 service mi_ric_file /vendor/bin/MI_RIC -f
 	class main
 	disabled
 	oneshot
-	seclabel u:r:mi_ric:s0
 
 on property:vendor.mi_ric.is.valid=0
 	stop mi_ric_file
